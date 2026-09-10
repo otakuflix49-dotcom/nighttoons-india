@@ -1,0 +1,2 @@
+import PublicHeader from "@/components/PublicHeader";import VisitTracker from "@/components/VisitTracker";
+export default function About(){return <><PublicHeader/><main className="container page-space narrow"><VisitTracker/><div className="card prose"><div className="eyebrow">ABOUT</div><h1>NIGHTTOONS INDIA</h1><p>NIGHTTOONS INDIA is an anime catalog focused on Hindi dubbed anime. Browse titles, open the available links and save favorites to your browser wishlist.</p><p>Use the Telegram page to find the official channels configured by the site owner.</p></div></main></>}

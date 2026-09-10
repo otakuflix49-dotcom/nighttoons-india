@@ -1,0 +1,3 @@
+ "use client";
+import {useState} from "react";import {useRouter} from "next/navigation";
+export default function DeleteAnimeButton({id}:{id:string}){const [busy,setBusy]=useState(false);const router=useRouter();async function del(){if(!confirm("Delete this anime and its links?"))return;setBusy(true);const r=await fetch(`/api/admin/anime/${id}`,{method:"DELETE"});if(!r.ok)alert(await r.text());else router.refresh();setBusy(false)}return <button className="btn danger" disabled={busy} onClick={del}>{busy?"Deleting…":"Delete"}</button>}

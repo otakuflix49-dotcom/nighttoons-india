@@ -1,0 +1,3 @@
+"use client";
+import {useEffect,useState} from "react";
+export default function WishlistButton({anime}:{anime:{id:string,name:string,slug:string,image_url?:string|null}}){const [saved,setSaved]=useState(false);useEffect(()=>{try{const x=JSON.parse(localStorage.getItem("nighttoons_wishlist")||"[]");setSaved(x.some((a:any)=>a.id===anime.id))}catch{}} , [anime.id]);function toggle(){try{const x=JSON.parse(localStorage.getItem("nighttoons_wishlist")||"[]");const next=saved?x.filter((a:any)=>a.id!==anime.id):[...x,anime];localStorage.setItem("nighttoons_wishlist",JSON.stringify(next));setSaved(!saved);window.dispatchEvent(new Event("wishlist-change"))}catch{}}return <button className={`btn ${saved?"":"secondary"}`} onClick={toggle}>{saved?"♥ Saved":"♡ Wishlist"}</button>}

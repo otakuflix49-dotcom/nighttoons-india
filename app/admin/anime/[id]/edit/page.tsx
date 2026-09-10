@@ -1,0 +1,2 @@
+import {notFound} from "next/navigation";import {createAdminClient} from "@/lib/supabase-admin";import AnimeForm from "@/components/AnimeForm";import {requireOwnerPage} from "@/lib/owner";
+export default async function EditAnime({params}:{params:Promise<{id:string}>}){await requireOwnerPage();const {id}=await params;const {data}=await createAdminClient().from("anime").select("*,anime_links(*)").eq("id",id).single();if(!data)notFound();return <div><h1>Edit Anime</h1><p className="muted">Update this anime post and its links.</p><AnimeForm mode="edit" anime={data}/></div>}

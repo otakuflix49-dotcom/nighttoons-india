@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server";
+export async function POST(req:Request){try{const body=await req.json();const email=String(body?.email||"").trim().toLowerCase();const owner=String(process.env.OWNER_EMAIL||"").trim().toLowerCase();const allowed=!!email&&!!owner&&email===owner;return NextResponse.json({allowed},{status:allowed?200:403})}catch{return NextResponse.json({allowed:false},{status:400})}}

@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server";import {createAdminClient} from "@/lib/supabase-admin";
+export async function POST(req:Request){try{const body=await req.json().catch(()=>({}));const path=typeof body.path==="string"?body.path.slice(0,500):"/";const sb=createAdminClient();await sb.from("site_visits").insert({path});}catch{}return NextResponse.json({ok:true})}

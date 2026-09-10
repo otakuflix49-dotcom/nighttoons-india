@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <main className="container page-space" style={{textAlign:"center"}}><h1>404</h1><p className="muted">Page not found.</p><Link className="btn" href="/">Go Home</Link></main>}
