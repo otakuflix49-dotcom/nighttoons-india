@@ -26,7 +26,7 @@ Next.js + Supabase anime catalog with owner-only OTP admin access.
 NEXT_PUBLIC_SUPABASE_URL=https://YOUR-PROJECT.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY
 SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
-OWNER_EMAIL=nighttoonsindia@gmail.com
+OWNER_EMAIL=your-owner-email@example.com
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
