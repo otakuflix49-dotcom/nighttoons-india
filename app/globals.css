@@ -27,3 +27,46 @@
   height: auto !important;
   padding-bottom: 18px !important;
 }
+
+/* Compact anime post layout */
+.anime-card {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+.anime-card .poster {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 2 / 3 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.anime-card .poster img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.anime-card-body {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 10px 12px !important;
+  margin: 0 !important;
+}
+
+.anime-card-body strong {
+  display: block !important;
+  line-height: 1.3 !important;
+}
+
+.anime-card-body span {
+  display: block !important;
+  margin-top: 4px !important;
+}
