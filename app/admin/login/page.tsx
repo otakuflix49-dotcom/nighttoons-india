@@ -55,7 +55,7 @@ export default function Login(){
         type:"email"
       });
       if(error)setMsg(error.message);
-      else router.replace("/admin/dashboard");
+      else window.location.replace("/admin/dashboard");
     }catch(e:any){
       setMsg(e.message||"OTP verification failed.");
     }finally{setBusy(false);}
@@ -76,3 +76,4 @@ export default function Login(){
     </div>
   </main>;
 }
+
