@@ -26,7 +26,7 @@ export async function PUT(req:Request,{params}:{params:Promise<{id:string}>}){
   const links=Array.isArray(body.links)
     ? body.links.map((x:any,i:number)=>linkSchema.parse({...x,sort_order:i}))
     : [];
-  if(links.length) await sb.from("anime_links").insert(links.map(x=>({...x,anime_id:id})));
+  if(links.length) await sb.from("anime_links").insert(links.map((x: any)=>({...x,anime_id:id})));
 
   if(old.image_url&&parsed.data.image_url&&old.image_url!==parsed.data.image_url)
     await deleteStorageFile(old.image_url);
