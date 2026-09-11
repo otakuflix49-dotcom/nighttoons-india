@@ -5,11 +5,13 @@ export default function AnimeCard({
   variant = "default",
 }: {
   anime: any;
-  variant?: string;
+  variant?: "default" | "home";
 }) {
+  const isHome = variant === "home";
+
   return (
     <Link
-      className={`card anime-card ${variant === "home" ? "home-anime-card" : ""}`}
+      className={`card anime-card ${isHome ? "home-anime-card" : ""}`}
       href={`/${anime.slug}`}
     >
       <div className="poster">

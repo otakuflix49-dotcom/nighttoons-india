@@ -338,3 +338,200 @@ button,input,textarea,select{font:inherit}
     font-size:14px;
   }
 }
+/* ============================================================
+   NIGHTTOONS INDIA
+   FINAL HOME ANIME CARD DESIGN
+   HOME ONLY - DETAIL PAGE UNTOUCHED
+   ============================================================ */
+
+/* HOME GRID */
+.anime-grid:has(.home-anime-card) {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: start !important;
+}
+
+/* HOME CARD */
+.home-anime-card {
+  display: grid !important;
+  grid-template-columns: 190px minmax(0, 1fr) !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  overflow: hidden !important;
+  align-items: stretch !important;
+}
+
+/* HOME IMAGE BOX - HORIZONTAL */
+.home-anime-card .poster {
+  width: 190px !important;
+  height: 108px !important;
+
+  min-height: 108px !important;
+  max-height: 108px !important;
+
+  aspect-ratio: 16 / 9 !important;
+
+  overflow: hidden !important;
+
+  background: #181820 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* HOME IMAGE - FULL IMAGE / NO CROP */
+.home-anime-card .poster img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* HOME TEXT */
+.home-anime-card .anime-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+
+  justify-content: center !important;
+  align-items: flex-start !important;
+
+  width: 100% !important;
+  min-width: 0 !important;
+
+  min-height: 108px !important;
+  height: auto !important;
+
+  padding: 12px 14px !important;
+  margin: 0 !important;
+
+  gap: 5px !important;
+}
+
+/* HOME TITLE */
+.home-anime-card .anime-card-body strong {
+  display: -webkit-box !important;
+
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+
+  width: 100% !important;
+
+  overflow: hidden !important;
+
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+
+  white-space: normal !important;
+  text-overflow: ellipsis !important;
+}
+
+/* HOME SUBTITLE */
+.home-anime-card .anime-card-body span {
+  display: block !important;
+
+  margin: 0 !important;
+
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+
+  color: var(--muted) !important;
+}
+
+
+/* ============================================================
+   MOBILE HOME CARDS
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+  .anime-grid:has(.home-anime-card) {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .home-anime-card {
+    grid-template-columns: 135px minmax(0, 1fr) !important;
+  }
+
+  .home-anime-card .poster {
+    width: 135px !important;
+    height: 76px !important;
+
+    min-height: 76px !important;
+    max-height: 76px !important;
+
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .home-anime-card .poster img {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  .home-anime-card .anime-card-body {
+    min-height: 76px !important;
+
+    padding: 8px 10px !important;
+
+    gap: 3px !important;
+  }
+
+  .home-anime-card .anime-card-body strong {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  .home-anime-card .anime-card-body span {
+    font-size: 11px !important;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+  .home-anime-card {
+    grid-template-columns: 120px minmax(0, 1fr) !important;
+  }
+
+  .home-anime-card .poster {
+    width: 120px !important;
+    height: 68px !important;
+
+    min-height: 68px !important;
+    max-height: 68px !important;
+  }
+
+  .home-anime-card .anime-card-body {
+    min-height: 68px !important;
+    padding: 7px 9px !important;
+  }
+
+  .home-anime-card .anime-card-body strong {
+    font-size: 12px !important;
+  }
+
+  .home-anime-card .anime-card-body span {
+    font-size: 10px !important;
+  }
+}
