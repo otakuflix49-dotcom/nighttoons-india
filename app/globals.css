@@ -534,4 +534,50 @@ button,input,textarea,select{font:inherit}
   .home-anime-card .anime-card-body span {
     font-size: 10px !important;
   }
+}.detail {
+  display: grid !important;
+  grid-template-columns: minmax(260px, 520px) minmax(0, 1fr) !important;
+  gap: 30px !important;
+  margin-top: 20px !important;
+  align-items: start !important;
+}
+
+.detail-poster {
+  width: 100% !important;
+  max-width: 520px !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #181820 !important;
+  border-radius: 16px !important;
+}
+
+.detail-poster img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  background: #181820 !important;
+}
+
+@media (max-width: 760px) {
+  .detail {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .detail-poster {
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important;
+  }
 }
